@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gato 2 Jugadores</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --text: #1e2430;
+      --line: #cfd6e4;
+      --accent: #1f6feb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 70%);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    #gato-2p-app {
+      width: min(960px, 100%);
+    }
+
+    .game {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(30, 36, 48, 0.08);
+    }
+
+    .game-board {
+      display: grid;
+      gap: 16px;
+    }
+
+    .game-config {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fafbff;
+    }
+
+    .game-config div {
+      display: grid;
+      gap: 4px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    input {
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+
+    button {
+      cursor: pointer;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      transition: transform 0.08s ease, background 0.15s ease;
+    }
+
+    button:hover {
+      background: #f2f5ff;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .status {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .board-row {
+      display: flex;
+    }
+
+    .square {
+      width: 64px;
+      height: 64px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      font-size: 28px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .game-info {
+      min-width: 220px;
+      border-left: 1px solid var(--line);
+      padding-left: 16px;
+    }
+
+    .game-info ol {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .game-info button {
+      width: 100%;
+      text-align: left;
+      height: 32px;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 760px) {
+      .game {
+        flex-direction: column;
+      }
+
+      .game-info {
+        min-width: 0;
+        width: 100%;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script src="./Gato_2P.js"></script>
+</body>
+</html>
